@@ -1,4 +1,4 @@
-# SW-Galaxy-Map
+# StarWars Star Map
 ## Coded by- Viraat Udar
 ## Map source: https://blog.naver.com/copulso/120031200656
 
