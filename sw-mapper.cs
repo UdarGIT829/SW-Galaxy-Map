@@ -158,11 +158,11 @@ public class GalMap : Form
             {
                 w.WriteLine("{0},{1},{2},{3},{4}",e.X,e.Y,inputSystem.Text,inputSystemLetter.Text,inputSector.Text);
             }
-            populateSystemDict();
             messageBoxCS.AppendFormat("New Star System Added!");
             messageBoxCS.AppendLine();
             messageBoxCS.AppendFormat("{0},{1},Sector: {2}",inputSystem.Text,inputSystemLetter.Text,inputSector.Text);
             messageBoxCS.AppendLine();
+            populateSystemDict();
             inputSystem.Text = "";
         }
         MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event" );
