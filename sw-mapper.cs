@@ -139,7 +139,7 @@ public class GalMap : Form
         Controls.Add(mapControl);  
         mapControl.MouseClick += Control1_MouseClick;
     }
-
+ 
     private void Control1_MouseClick(Object sender, MouseEventArgs e) 
     {
         System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
@@ -164,7 +164,6 @@ public class GalMap : Form
             messageBoxCS.AppendFormat("{0},{1},Sector: {2}",inputSystem.Text,inputSystemLetter.Text,inputSector.Text);
             messageBoxCS.AppendLine();
             inputSystem.Text = "";
-            inputSystemLetter.Text = ((Char)(Convert.ToUInt16(inputSystemLetter.Text[0])+1)).ToString();
         }
         MessageBox.Show(messageBoxCS.ToString(), "MouseClick Event" );
 
