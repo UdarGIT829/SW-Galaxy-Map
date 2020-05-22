@@ -13,9 +13,11 @@ Compiled on Ubuntu 18.04 using Mono:
 ##### Known Bugs:
     * When set to user input, even with a blank star sector textbox failed searches in dictionary still say "added to system <whatever>"
     * "Could not set X locale modifiers" error, as I am rusty on C# I neglected to add destructors or the 'dispose()' call
+    * Occasional crash when selecting the System Letter Textbox, might fix with read-only mode and buttons to change the letter
 
 ##### Planned features:
     * ADD COMMENTS!
+    * Use a resource file *.resx to store images and text file containing dictionary
     * Checking for input files existence and format
     * Overlay image of user inputed systems, because goodness knows I havent found a complete SW star map
     * Search function
