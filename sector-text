@@ -59,3 +59,171 @@
 348,135,New Cov,I,Churba
 348,157,Drakien,J,Churba
 415,181,Circarpous,K,Churba
+363,336,Bilbringi,A,Brak
+388,325,Abregado,B,Brak
+318,331,Nkllon,C,Brak
+425,306,Sundari,D,Brak
+409,284,Ord Mantell,E,Brak
+451,261,Sevarcos,F,Brak
+424,246,Bacrana,G,Brak
+217,331,Rampa,A,Corporate
+296,339,Ruuria,B,Corporate
+261,324,Gaurick,C,Corporate
+215,299,Bonadan,D,Corporate
+182,289,Etti,E,Corporate
+186,259,Mallordian,F,Corporate
+153,248,Knolstee,G,Corporate
+155,280,Mytus/Star's End (hidden),H,Corporate
+150,215,Bestine,A,Sepan
+188,221,Nal Hutta,B,Sepan
+162,200,Ithor,C,Sepan
+213,173,Caprica,D,Sepan
+249,160,Khomm,E,Sepan
+283,149,Kashyyyk,F,Sepan
+286,129,Roche Asteroid Field,G,Sepan
+240,135,Vortex,H,Sepan
+182,184,Sepan,I,Sepan
+203,194,Morishim,J,Sepan
+172,228,Ylesia,K,Sepan
+371,115,Coyn,A,Elrood
+392,115,Kidron,B,Elrood
+403,130,Elrood,C,Elrood
+336,108,Kuras,D,Elrood
+327,96,Torina,E,Elrood
+363,95,Merisee,F,Elrood
+312,91,Derilyn,G,Elrood
+386,101,Lanthrym,H,Elrood
+480,224,Teraphon,A,Hapes Consortium
+514,217,Arabanth,B,Hapes Consortium
+497,195,Gallinore,C,Hapes Consortium
+485,185,Hapes,D,Hapes Consortium
+465,187,Selab,E,Hapes Consortium
+462,150,Reboam,F,Hapes Consortium
+445,126,Charubah,G,Hapes Consortium
+422,138,Maires,H,Hapes Consortium
+485,204,Thrakia,I,Hapes Consortium
+459,335,Dantooine,A,Hadar
+489,304,Honoghr,B,Hadar
+480,247,Turkana,C,Hadar
+508,245,Tund,D,Hadar
+498,271,Wayland,E,Hadar
+466,304,Kile (Gall),F,Hadar
+329,383,Bespin,A,Boeus
+367,382,Ison,B,Boeus
+395,352,Hoth,C,Boeus
+434,345,Echnos,D,Boeus
+416,361,Moozatri,E,Boeus
+347,369,Anoat,F,Boeus
+294,390,Iridonia,A,Lahara
+262,386,Cyrax,B,Lahara
+214,375,Kamar,C,Lahara
+174,355,Proxima Dibel,D,Lahara
+282,373,Ruuria,E,Lahara
+242,365,Bandomeer,F,Lahara
+181,336,Mon Gazza,G,Lahara
+236,379,Varristad,H,Lahara
+146,338,Lur,A,Hatawa
+161,317,Duroon,B,Hatawa
+109,289,Ord Ibanna,C,Hatawa
+138,296,Brigia,D,Hatawa
+126,257,Svivren,E,Hatawa
+96,247,Aridus,F,Hatawa
+106,219,Aquaris,A,Abrion
+101,195,Da Soocha,B,Abrion
+134,151,Bimmisaari,C,Abrion
+152,164,Ukio,D,Abrion
+166,128,Yavin,E,Abrion
+182,143,Myrkr,F,Abrion
+184,119,New Alderaan,A,Arkanis
+206,120,Pii,B,Arkanis
+229,120,Arkania,C,Arkanis
+276,101,Jaemus,D,Arkanis
+250,94,Criton's Point,E,Arkanis
+294,104,Bextar,F,Arkanis
+299,91,Entralla,G,Arkanis
+379,81,Onderon,A,Atrivis
+351,70,Atrivis,B,Atrivis
+326,73,Charr (destroyed),C,Atrivis
+378,60,Mantooine,D,Atrivis
+335,49,Empress Teta,E,Atrivis
+524,148,Cedre,A,Quelii
+402,88,Kuar,B,Quelii
+511,123,Dathomir,C,Quelii
+475,131,Karnak Alpha,D,Quelii
+454,94,Quelii,E,Quelii
+417,72,Mandalore,F,Quelii
+501,148,Perhn,G,Quelii
+533,224,Travnin,A,Minos
+549,157,Adarlon,B,Minos
+572,207,Yelsain,C,Minos
+549,176,Shesharile,D,Minos
+522,171,Gesaril,E,Minos
+576,229,Mar-Done,F,Minos
+566,224,Mestra Asteroid Field,G,Minos
+554,215,Karideph,H,Minos
+538,208,Pergitor,I,Minos
+544,292,Kal'shebboll,A,Kathol
+567,286,Charis,B,Kathol
+551,320,Aaris,C,Kathol
+575,243,Unknown,D,Kathol
+561,254,Unknown,E,Kathol
+522,300,Gandle Ott,F,Kathol
+528,278,Lorize,G,Kathol
+450,397,Obroa-skai,A,Horuz
+417,396,Nublax,B,Horuz
+443,373,Ryloth,C,Horuz
+509,345,Eriadu,D,Horuz
+540,330,Horuz,E,Horuz
+511,318,Firrerre,F,Horuz
+492,374,Ixion,G,Horuz
+464,371,Tatooine,H,Horuz
+316,431,Bakura,A,Sluis
+395,419,Dagobah,B,Sluis
+349,425,Sluis Van,C,Sluis
+366,412,Praesitlyn,D,Sluis
+385,397,Bpfassh,E,Sluis
+299,435,Thonkbah,A,Ninth Quadrant
+143,363,Belsavis,B,Ninth Quadrant
+152,395,Ad Mare,C,Ninth Quadrant
+294,408,Baskarn,D,Ninth Quadrant
+215,392,Oseon,E,Ninth Quadrant
+190,393,Rafa,F,Ninth Quadrant
+167,377,Smuggler's Run,G,Ninth Quadrant
+231,424,Nexus,H,Ninth Quadrant
+109,373,Wallach,A,Juvex
+127,353,Geidi Prime,B,Juvex
+95,351,Arrakis,C,Juvex
+96,311,Caladan,D,Juvex
+76,327,Eridania,E,Juvex
+103,331,Kaitain,F,Juvex
+37,248,Anoth,A,Senex
+65,262,Senex,B,Senex
+79,294,Jomark,C,Senex
+70,247,Svivren,D,Senex
+55,309,Halanit,E,Senex
+53,292,Iphigin,F,Senex
+73,220,Gamorr,A,Moddell
+40,210,Tradaria,B,Moddell
+68,156,Endor,C,Moddell
+86,169,Munto Codru,D,Moddell
+59,204,Mutanda,E,Moddell
+67,172,Alzoc,F,Moddell
+163,108,Janius,A,Janius
+137,112,Aimer,B,Janius
+90,135,Unknown,C,Janius
+124,106,Nazarelle,D,Janius
+119,135,Unknown,E,Janius
+211,86,Delphi,F,Janius
+202,64,Kobol,G,Janius
+163,78,Unknown,H,Janius
+186,92,Agamar,I,Janius
+229,55,Ossus,A,Auril
+298,70,Capza,B,Auril
+249,74,Stenness Node,C,Auril
+275,64,Auril,D,Auril
+262,49,Adega,E,Auril
+296,55,Taanab,F,Auril
+381,6,Ziost,~,Far Reaches
+410,475,Lwekk,~,Far Reaches
+628,78,Demios,~,Far Reaches
+613,453,Alien Homeworld,~,Far Reaches
