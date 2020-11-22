@@ -1,8 +1,17 @@
 using System;
+using System.Drawing;
 using System.Collections.Generic;
 
 namespace StarMap
 {
+
+    public class Ellipse
+        {
+        public Color Color { get; set; }
+        public Point Location { get; set; }
+        public Size Size { get; set; }
+        public bool Filled { get; set; }
+        }
     public class sSystemDetails
     {
         public string name { get; set;}

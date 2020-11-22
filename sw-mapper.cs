@@ -18,32 +18,39 @@ namespace StarMap
         Dictionary< string, List<string> > regionDict = new Dictionary<string, List<string> >();
         //Multi-use global variables
 
+        private List<Ellipse> ellipses = new List<Ellipse>();
+
         
         bool inputReadyCheck = false;
 
-        /*
+        
         public void populateRegionList() //This is the Problem
         {
             string region; 
             string tempSector;
             string[] tempSectorArr;
             List<string> tempSectors;
-            string[] sectorLines = System.IO.File.ReadAllLines("sector-text");
+            string[] sectorLines = System.IO.File.ReadAllLines("regions-mapping");
             foreach (string sector in sectorLines)
             {
                 tempSectorArr = sector.Split(',');
                 region = tempSectorArr[0];
                 tempSectors = new List<string>();
-                for(int i=1;i<sectorLines.Length;i++)
+                //for(int i=1;i<sectorLines.Length;i++)
+                foreach(string iterSector in tempSectorArr)
                 {
-                    tempSector = tempSectorArr[i]; 
-                    tempSectors.Add(tempSector);
+                    //tempSector = tempSectorArr[i]; 
+                    //tempSectors.Add(tempSector)
+                    tempSectors.Add(iterSector);
                 }
-                regionDict.Add(region, tempSectors);
+                if(!regionDict.ContainsKey(region))
+                {
+                    regionDict.Add(region, tempSectors);
+                }
             }
 
         }
-        */
+        
         public void populateVisibleSystemDict ()
         {
             //systemDict = new Dictionary< Tuple<int,int> ,string>();
@@ -54,7 +61,7 @@ namespace StarMap
             string tempSector;
             sSystemDetails temp;
 
-            //populateRegionList();
+            populateRegionList();
             string[] systemLines = System.IO.File.ReadAllLines("sector-text");
             foreach (string line in systemLines)
             {
@@ -85,10 +92,14 @@ namespace StarMap
             string result = "Not found";
             foreach(KeyValuePair<string, List<string> > region in regionDict)
             {
-                if(region.Value.Exists(x => x == searchSector))
+                foreach(string iterSector in region.Value)
                 {
-                    result = region.Key;
-                    break;
+                    //Console.WriteLine(iterSector);
+                    if(searchSector == iterSector)
+                    {
+                        result = region.Key;
+                        break;
+                    }
                 }
             }
             return result;
@@ -197,8 +208,9 @@ namespace StarMap
             inputSector.Hide();
             populateVisibleSystemDict();
 
-            PictureBox mapControl = new PictureBox();  
             Bitmap source = new Bitmap("starwars_map.JPG");  
+            /*
+            PictureBox mapControl = new PictureBox();  
             mapControl.Size = source.Size;
             mapControl.Location = new Point(10,5 + Control1.PreferredHeight+5);
             this.Size = source.Size + new Size(30, 80);
@@ -206,6 +218,35 @@ namespace StarMap
             mapControl.Image = (Image) source;  
             Controls.Add(mapControl);  
             mapControl.MouseClick += Control1_MouseClick;
+            //mapControl.Hide();
+            */
+            this.BackgroundImageLayout = ImageLayout.Center;
+            this.BackgroundImage = (Image) source;
+
+            PictureBox UsermapControl = new PictureBox();  
+            Bitmap source2 = new Bitmap(source.Width,source.Height);  
+            UsermapControl.Size = source.Size + new Size(100,100);
+            //UsermapControl.Location = new Point(10,5 + Control1.PreferredHeight+5);
+            UsermapControl.Location = new Point(0,0);
+            this.Size = source.Size + new Size(100, 100);
+            UsermapControl.Dock = DockStyle.None;  
+            //UsermapControl.Image = new Image(source2); 
+            UsermapControl.Image = (Image) source2; 
+            Controls.Add(UsermapControl);  
+            //UsermapControl.MouseClick += userMap_MouseClick;
+            UsermapControl.MouseClick += Control1_MouseClick;
+            
+            
+            // Transparent background...  
+            UsermapControl.BackColor = Color.Transparent;
+            /*
+            // Change parent for overlay PictureBox...
+            UsermapControl.Parent    = mapControl;
+
+            // Change overlay PictureBox position in new parent...
+            UsermapControl.Location  = new Point(0, 0);
+            */
+
         }
     
         private void Control1_MouseClick(Object sender, MouseEventArgs e) 
@@ -236,7 +277,19 @@ namespace StarMap
             }
             else if(searchResult == "Not Found")
             {
-                //coords not found, do nothing
+                Point newLoc = new Point(e.Location.X-4,e.Location.Y-4);
+                ellipses.Add(new Ellipse
+                {
+                    Color = Color.Yellow,
+                    Location = newLoc,
+                    Size = new Size(4, 4),
+                    Filled = true,
+                });
+                    Console.WriteLine("Clicked on: {0},{1}",e.X,e.Y);
+
+                //Tell the form to redraw itself
+                this.Invalidate();
+
             }
             else
             {
@@ -278,6 +331,18 @@ namespace StarMap
             }
             MessageBox.Show(messageBoxCS.ToString(), "User Input Message!" );
         }
-
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            //Console.WriteLine("Did redraw");
+            //Redraw each ellipse in the list
+            foreach (var ellipse in ellipses)
+            {
+                using (SolidBrush b = new SolidBrush(Color.Yellow))
+                {
+                    e.Graphics.FillEllipse(b, new Rectangle(ellipse.Location, ellipse.Size));
+                    //Console.Write("Ellipse drawn at: {0}, {1}\n",ellipse.Location.X,ellipse.Location.Y);
+                }
+            }    
+        }
     }
 }
