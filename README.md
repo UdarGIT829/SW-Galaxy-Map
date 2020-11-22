@@ -7,8 +7,8 @@ Program to display a starmap, which the user can find planets &amp; star systems
 Although I have provided a map from the mentioned source, because it came with an index, it technically would work with any similar map. I have been slowly populating the file "sector-text" based on the provided map, however.
 
 Compiled on Ubuntu 18.04 using Mono:
-    * mcs sw-mapper.cs -pkg:dotnet
-    * mono sw-mapper.cs
+    * mcs sw-mapper.cs star-systemClass.cs -pkg:dotnet
+    * mono sw-mapper.exe
 
 ##### Known Bugs:
     * When set to user input, even with a blank star sector textbox failed searches in dictionary still say "added to system <whatever>"
