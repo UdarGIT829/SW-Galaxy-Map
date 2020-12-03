@@ -37,6 +37,7 @@ namespace StarMap
                 region = tempSectorArr[0];
                 tempSectors = new List<string>();
                 //for(int i=1;i<sectorLines.Length;i++)
+                System.Console.WriteLine(tempSectorArr);
                 foreach(string iterSector in tempSectorArr)
                 {
                     //tempSector = tempSectorArr[i]; 
@@ -61,7 +62,7 @@ namespace StarMap
             string tempSector;
             sSystemDetails temp;
 
-            populateRegionList();
+
             string[] systemLines = System.IO.File.ReadAllLines("sector-text");
             foreach (string line in systemLines)
             {
@@ -78,7 +79,11 @@ namespace StarMap
                 tempSector = tokens[4];
                 inputSector.Text = tempSector;
                 coords = new Tuple<int, int>(xCoor,yCoor);
-                systemDict.Add(coords,name);
+                try {
+                    systemDict.Add(new Tuple<int, int>(xCoor,yCoor),name);
+                }
+                catch {
+                }
                 temp = new sSystemDetails(name,coords,tempSector);
                 if(!systemDetailsDict.ContainsKey(name))
                 {
@@ -109,7 +114,7 @@ namespace StarMap
         {
             string result;
 
-            int diffX, diffY, distance;
+            int diffX, diffY, distance = 0;
             int minDist = int.MaxValue; //set at max to find minimum distance
             //find closest system
             foreach(KeyValuePair< Tuple<int,int> ,string>sSystem in systemDict)
@@ -123,7 +128,7 @@ namespace StarMap
                     inCoords = sSystem.Key;
                 }
             }
-
+            Console.WriteLine(inCoords);
             try
             {
                 result = systemDict[inCoords];
@@ -132,6 +137,10 @@ namespace StarMap
             catch (KeyNotFoundException)
             {
                 result = "Not Found";
+
+                Console.WriteLine(distance);
+                
+
                 if(inputReadyCheck && inputSector.Text != "") //Ignores the second logic in this if() for some reason
                 {
                     Console.WriteLine("{0} added to system {1}!",inputSystem.Text,inputSector.Text);
@@ -206,6 +215,7 @@ namespace StarMap
             inputSector.Location = new Point(Control1.PreferredWidth+inputSystem.Width+inputSystemLetter.Width+10, 3);
             Controls.Add(inputSector);
             inputSector.Hide();
+            populateRegionList();
             populateVisibleSystemDict();
 
             Bitmap source = new Bitmap("starwars_map.JPG");  
@@ -275,7 +285,7 @@ namespace StarMap
                 populateVisibleSystemDict();
                 inputSystem.Text = "";
             }
-            else if(searchResult == "Not Found")
+            else if(searchResult == "Not Found" && inputReadyCheck)
             {
                 Point newLoc = new Point(e.Location.X-4,e.Location.Y-4);
                 ellipses.Add(new Ellipse
